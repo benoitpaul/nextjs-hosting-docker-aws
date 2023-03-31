@@ -11,17 +11,19 @@
     "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/jest": "^29.4.0",
-    "@types/node": "18.13.0",
-    "jest": "^29.4.2",
+    "@types/jest": "^29.5.0",
+    "@types/node": "18.15.11",
+    "aws-cdk": "2.72.0",
+    "jest": "^29.5.0",
     "ts-jest": "^29.0.5",
-    "aws-cdk": "2.66.0",
     "ts-node": "^10.9.1",
-    "typescript": "~4.9.5"
+    "typescript": "~5.0.2"
   },
   "dependencies": {
-    "aws-cdk-lib": "2.66.0",
-    "constructs": "^10.0.0",
+    "@aws-cdk/aws-apprunner-alpha": "^2.72.0-alpha.0",
+    "aws-cdk-lib": "2.72.0",
+    "cdk-apprunner-autoscaling": "^1.0.0",
+    "constructs": "^10.1.296",
     "source-map-support": "^0.5.21"
   }
 }

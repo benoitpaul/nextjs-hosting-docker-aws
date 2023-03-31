@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project
+# Hosting a Docker NextJs project on AWS
 
-This is a blank project for CDK development with TypeScript.
+This is a project with different stacks to showcase how to host a Docker NextJs project on AWS.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Create the NextJs project
 
-## Useful commands
+- `gerServerSideProps` to make sure SSR is available
+- copy Dockerfile from https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
+- In all stacks, the NexJs project is dockerized with DockerImageAsset. Make sure the docker daemon is running
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+## Hosting with App Runner
+
+- npm install @aws-cdk/aws-apprunner-alpha
+- use the L2 construct `Service`
+
+## Hosting with App Runner with Auto Scaling Configuration
+
+- npm install cdk-apprunner-autoscaling
+- define the Auto Scaling Configuration
+- use the L1 construct `CfnService`
